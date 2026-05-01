@@ -116,7 +116,7 @@ M3-PROJECT-V2/
 
 ```bash
 git clone https://github.com/belen-dominguez/techflow-multi-agente.git
-cd M3-PROJECT-V2
+cd techflow-multi-agente
 ```
 
 ### 2. Crear entorno virtual
