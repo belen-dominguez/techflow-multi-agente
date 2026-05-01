@@ -18,6 +18,7 @@ from agents.domain.tech_agent import TechAgent
 from agents.system.evaluator_agent import EvaluatorAgent
 from rag.pipeline import RAGPipeline
 from routing.keyword_router import  KeywordRouter
+from routing.llm_router import LLMRouter
 from shared.config_loader import ConfigLoader
 from shared.io import save_results
 from shared.logger import get_logger
@@ -45,20 +46,31 @@ def main():
     log.info("  TECHFLOW - SISTEMA MULTIAGENTE")
     print("=" * 50)
 
-   
+    # Agentes
     factory = AgentFactory(config, embeddings, llm)
     agents = factory.create_agents()
     agents["unknown"] = FallbackAgent()
-    
     log.info(f"Agentes creados.")
-    router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "unknown"))
+
+    # Router 
+    fallback = config.get("routing.fallback_domain")
+    router   = (
+        LLMRouter(llm=llm, fallback_domain=fallback)
+        if config.get("routing.strategy") == "llm"
+        else KeywordRouter(fallback_domain=fallback)
+    )
+    # router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "unknown")) 
     log.info(f"Router creado.")
+
     tracer = Tracer()
     log.info(f"Tracer creado.")
+
     orchestrator = Orchestrator(router=router, agents=agents, tracer=tracer)
     log.info(f"Orchestrator creado.")
+
     evaluator    = EvaluatorAgent(llm=llm)
     log.info(f"Evaluador creado.")
+    
     log.info(f"Sistema listo.\n")
  
     # Ejecutamos las consultas de prueba

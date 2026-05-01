@@ -86,7 +86,8 @@ M3-PROJECT-V2/
 │   │   └── retriver.py
 │   │
 │   ├── routing/                   # Enrutamiento de consultas
-│   │   └── keyword_router.py
+│   │   ├── keyword_router.py
+│   │   └── llm_router.py
 │   │
 │   ├── prompts/                   # Templates de prompts
 │   │   └── template.py
@@ -212,7 +213,7 @@ agent.answer(question)
 
 ## 🧠 Router
 
-Se utiliza un `KeywordRouter` que determina el dominio en base a palabras clave.
+Existen dos formas de router que se pueden seleccionar desde el archivo config:  un `KeywordRouter` que determina el dominio en base a palabras clave y un `LLMRouter` que utiliza el llm para clasificar la consulta.
 
 ---
 

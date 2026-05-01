@@ -31,8 +31,8 @@ documents:
 
 
 routing:
-  strategy: "keyword" # "keyword" o "llm"
-  fallback_domain: "unknown"
+  strategy: "llm" # "keyword" o "llm"
+  fallback_domain: "unknown" # Dominio por defecto si el router falla
 
 
 langfuse:

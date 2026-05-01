@@ -12,7 +12,11 @@
     "expected_domain": "hr"
   },
     {
-    "query": "¿Que pasa si no voy a trabajar?",
+    "query": "¿Cual es la capital de Brasil?",
+    "expected_domain": "unknown"
+  },
+     {
+    "query": "No puedo acceder a mi cuenta de Slack, no puedo solicitar mi licencia por maternidad",
     "expected_domain": "unknown"
   },
   {
