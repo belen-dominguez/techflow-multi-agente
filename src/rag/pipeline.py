@@ -9,7 +9,9 @@ from rag.embeddings import EmbeddingStore
 from rag.loader import DocumentLoader
 from rag.retriver import Retriever
 from shared.config_loader import ConfigLoader
+from shared.logger import get_logger
 
+log = get_logger("rag_pipeline")
 
 class RAGPipeline:
     """Construye el pipeline RAG completo para un dominio."""
@@ -41,13 +43,13 @@ class RAGPipeline:
             Instancia de Retriever lista para hacer búsquedas.
         """
         try:
-            print(f"[RAGPipeline] Construyendo retriever para '{self.domain}'...")
+            log.info(f"[RAGPipeline] Construyendo retriever para '{self.domain}'...")
 
             # Paso 1: cargar documentos del dominio
             data_path = self.config.get(f"documents.{self.domain}_path")
             loader = DocumentLoader(folder_path=data_path)
             documents = loader.load()
-            print(f"✅ {len(documents)} documentos cargados")
+            log.info(f"[RAGPipeline] ✅ {len(documents)} documentos cargados")
 
             # Paso 2: dividir en chunks
             chunker = Chunker(
@@ -55,13 +57,13 @@ class RAGPipeline:
                 chunk_overlap=self.config.get("chunking.chunk_overlap"), 
             )
             chunks = chunker.chunk_documents(documents)
-            print(f"✅ {len(chunks)} chunks creados")
+            log.info(f"[RAGPipeline] ✅ {len(chunks)} chunks creados")
 
             # Paso 3: generar embeddings y guardar en FAISS
             index_path = self.config.get("vector_store.persist_directory") + f"/{self.domain}"
             store = EmbeddingStore(embeddings=embeddings, index_path=index_path)
             store.build_and_save(chunks)
-            print(f"✅ Índice construido y guardado en {index_path}")
+            log.info(f"[RAGPipeline] ✅ Índice construido y guardado en {index_path}")
 
             # Paso 4: crear y retornar el retriever
             self.retriever = Retriever(store.index)

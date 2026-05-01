@@ -157,7 +157,6 @@ El sistema incluye un evaluador automático basado en LLM que mide:
 * **Accuracy** → ¿es correcta?
 * **Completeness** → ¿está completa?
 
-El score final se calcula como promedio.
 
 ---
 

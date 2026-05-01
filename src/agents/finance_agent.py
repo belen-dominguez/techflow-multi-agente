@@ -5,11 +5,15 @@ Responsabilidad: responder consultas sobre Finanzas
 usando RAG sobre la documentación interna de Finance de TechFlow.
 
 """
+from asyncio import log
 from typing import Any, Dict
 
 from prompts.template import RAG_AGENT_PROMPT
+from shared.logger import get_logger
+
 
 DOMAIN_NAME = "Finanzas (Finance)"
+log = get_logger("finance_agent")
 
 class FinanceAgent:
     """Agente especializado en consultas de Finanzas.
@@ -37,5 +41,5 @@ class FinanceAgent:
             )
 
         response = self.llm.invoke(prompt)
-        print(f"[FinanceAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
+        log.info(f"[FinanceAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
         return {"response": response.content if hasattr(response, 'content') else str(response), "prompt": prompt, }

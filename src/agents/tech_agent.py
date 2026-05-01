@@ -8,9 +8,10 @@ usando RAG sobre la documentación interna de Tech de TechFlow.
 from typing import Any, Dict
 
 from prompts.template import RAG_AGENT_PROMPT
+from shared.logger import get_logger
 
 DOMAIN_NAME = "Tecnología (Tech)"
-
+log = get_logger("tech_agent")
 
 class TechAgent:
     """Agente especializado en consultas de IT y Tecnología.
@@ -36,5 +37,5 @@ class TechAgent:
             )
 
         response = self.llm.invoke(prompt)
-        print(f"[TechAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
+        log.info(f"[TechAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
         return {"response": response.content if hasattr(response, 'content') else str(response), "prompt": prompt, }

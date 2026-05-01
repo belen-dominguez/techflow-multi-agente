@@ -4,7 +4,9 @@ from typing import List, Optional
 from langchain.embeddings.base import Embeddings
 from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
+from shared.logger import get_logger
 
+log = get_logger("rag.embeddings")
 
 class EmbeddingStore:
     """Genera embeddings para una lista de chunks y los guarda en FAISS."""
@@ -29,6 +31,7 @@ class EmbeddingStore:
         """
         try:
             self.index = FAISS.from_documents(chunks, self.embeddings)
+            log.info(f"[EmbeddingStore] ✅ Índice construido para {len(chunks)} chunks")
             return self.index
         except Exception as error:
             raise RuntimeError("Error creando el índice FAISS desde los chunks") from error
@@ -44,6 +47,7 @@ class EmbeddingStore:
 
         try:
             self.index.save_local(str(self.index_path))
+            log.info(f"[EmbeddingStore] ✅ Índice guardado en {self.index_path}")
         except Exception as error:
             raise RuntimeError("Error guardando el índice FAISS en disco") from error
 
@@ -53,6 +57,7 @@ class EmbeddingStore:
         Se utiliza cuando ya existe un índice guardado y quieres reutilizarlo.
         """
         self.index = FAISS.load_local(str(self.index_path), self.embeddings)
+        log.info(f"[EmbeddingStore] ✅ Índice cargado desde {self.index_path}")
         return self.index
 
     def build_and_save(self, chunks: List[Document]) -> FAISS:

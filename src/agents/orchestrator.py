@@ -6,7 +6,10 @@ su intención usando el router, y delegarla al agente correcto.
 
 """
 from typing import Any,  Dict
+from shared.logger import get_logger
 
+
+log = get_logger("orchestrator")
 
 class Orchestrator:
     """Clasifica la consulta del usuario y la delega al agente especializado correspondiente."""
@@ -42,7 +45,7 @@ class Orchestrator:
 
             # Paso 2: si el dominio no tiene agente, usamos el fallback
             if domain not in self.agents:
-                print(f"[Orchestrator] Dominio '{domain}' sin agente. "
+                log.info(f"[Orchestrator] Dominio '{domain}' sin agente. "
                         f"Usando fallback: 'hr'")
                 domain = "hr"
 
@@ -52,7 +55,7 @@ class Orchestrator:
             })
 
     
-            print(f"[Orchestrator] Enrutando a agente '{domain}'...")
+            log.info(f"[Orchestrator] Enrutando a agente '{domain}'...")
 
             with self.tracer.start_span(domain):
                 # Paso 3: delegar al agente

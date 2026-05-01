@@ -16,6 +16,7 @@ langfuse
 python-dotenv
 pyyaml
 tiktoken
+rich
 
 # Jupyter
 jupyter

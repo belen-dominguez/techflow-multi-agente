@@ -10,8 +10,10 @@ usando RAG sobre la documentación interna de HR de TechFlow.
 from typing import Any, Dict
 
 from prompts.template import RAG_AGENT_PROMPT
+from shared.logger import get_logger
 
 DOMAIN_NAME = "Recursos Humanos (HR)"
+log = get_logger("hr_agent")
 
 class HRAgent:
     """Agente especializado en consultas de Recursos Humanos.
@@ -40,5 +42,5 @@ class HRAgent:
 
         response = self.llm.invoke(prompt)
 
-        print(f"[HRAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
+        log.info(f"[HRAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
         return {"response": response.content if hasattr(response, 'content') else str(response), "prompt": prompt, }

@@ -2,7 +2,9 @@ from typing import List
 
 from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
+from shared.logger import get_logger
 
+log = get_logger("retriever")
 
 class Retriever:
     """Ejecuta búsquedas semánticas en el vector store y devuelve chunks relevantes."""
@@ -24,6 +26,7 @@ class Retriever:
             documents = self.index.similarity_search(query, k=k)
             return documents
         except Exception as error:
+            log.error(f"[Retriever] Error durante la búsqueda de similitud: {error}")
             raise RuntimeError("Error durante la búsqueda de similitud") from error
 
     def retrieve_with_scores(self, query: str, k: int = 4) -> List[tuple]:
@@ -36,6 +39,7 @@ class Retriever:
             results = self.index.similarity_search_with_relevance_scores(query, k=k)
             return results
         except Exception as error:
+            log.error(f"[Retriever] Error durante la búsqueda con puntuaciones: {error}")
             raise RuntimeError("Error durante la búsqueda con puntuaciones") from error
 
 

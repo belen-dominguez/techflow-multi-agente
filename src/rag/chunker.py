@@ -2,7 +2,9 @@ from typing import List
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from shared.logger import get_logger
 
+log = get_logger("chunker")
 
 class Chunker:
     """Divide Documents en fragmentos usando RecursiveCharacterTextSplitter."""

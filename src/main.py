@@ -8,6 +8,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
+from agents import factory
+from agents.factory import AgentFactory
 from agents.finance_agent import FinanceAgent
 from agents.hr_agent import HRAgent
 from agents.orchestrator import Orchestrator
@@ -16,6 +18,7 @@ from agents.evaluator_agent import EvaluatorAgent
 from rag.pipeline import RAGPipeline
 from routing.keyword_router import  KeywordRouter
 from shared.config_loader import ConfigLoader
+from shared.logger import get_logger
 from shared.tracer import Tracer
 
 ROOT_DIR = Path(__file__).parent.parent
@@ -24,6 +27,7 @@ load_dotenv()
 
 # Carga la configuración
 config = ConfigLoader()
+log = get_logger("main")
 
 llm = ChatOpenAI(
     model=config.get("llm.model"),
@@ -33,39 +37,25 @@ llm = ChatOpenAI(
 
 embeddings = OpenAIEmbeddings()
 
-def create_agents():
-    """Crea los agentes para cada dominio usando RAGPipeline."""
-    agents = {}
-    for domain in ["hr", "tech", "finance"]:
-        pipeline = RAGPipeline(domain=domain, config=config)
-        retriever = pipeline.build(embeddings=embeddings)
-
-        if domain == "hr":
-            agents[domain] = HRAgent(retriever=retriever, llm=llm)
-        elif domain == "tech":
-            agents[domain] = TechAgent(retriever=retriever, llm=llm)
-        elif domain == "finance":
-            agents[domain] = FinanceAgent(retriever=retriever, llm=llm)
-
-    return agents
 
 def main():
     print("=" * 50)
-    print("  TECHFLOW - SISTEMA MULTIAGENTE")
+    log.info("  TECHFLOW - SISTEMA MULTIAGENTE")
     print("=" * 50)
 
    
-    agents = create_agents()
-    print(f"Agentes creados.")
+    factory = AgentFactory(config, embeddings, llm)
+    agents = factory.create_agents()
+    log.info(f"Agentes creados.")
     router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "hr"))
-    print(f"Router creado.")
+    log.info(f"Router creado.")
     tracer = Tracer()
-    print(f"Tracer creado.")
+    log.info(f"Tracer creado.")
     orchestrator = Orchestrator(router=router, agents=agents, tracer=tracer)
-    print(f"Orchestrator creado.")
+    log.info(f"Orchestrator creado.")
     evaluator    = EvaluatorAgent(llm=llm)
-    print(f"Evaluador creado.")
-    print(f"\nSistema listo.\n")
+    log.info(f"Evaluador creado.")
+    log.info(f"Sistema listo.\n")
  
     # Ejecutamos las consultas de prueba
     with open(ROOT_DIR / "test_queries.json", "r", encoding="utf-8") as f:
@@ -104,9 +94,9 @@ def main():
             )
     
             # 4. Mostramos en terminal
-            print(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
-            print(f"   Evaluación: relevance: {evaluation['relevance']}/10, accuracy: {evaluation['accuracy']}/10, completeness: {evaluation['completeness']}/10 — {evaluation['reasoning']}")
-            print("=" * 60)
+            log.info(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
+            log.info(f"   Evaluación: relevance: {evaluation['relevance']}/10, accuracy: {evaluation['accuracy']}/10, completeness: {evaluation['completeness']}/10 — {evaluation['reasoning']}")
+            log.info("=" * 60)
 
             results.append({**result, "expected_domain": expected, "evaluation": evaluation})
  
@@ -117,7 +107,7 @@ def main():
  
 
     tracer.flush()
-    print("\n✓ Resultados guardados en outputs/test_results.json")
+    log.info("\n✓ Resultados guardados en outputs/test_results.json")
  
 
 

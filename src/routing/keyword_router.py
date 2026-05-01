@@ -5,11 +5,11 @@ keyword_router.py
 Responsabilidad: clasificar la intención de una consulta
 usando un diccionario de palabras clave por dominio.
 
-Ventajas:   rápido, sin costo de tokens, predecible.
-Desventajas: frágil ante consultas ambiguas o con vocabulario
-             que no está en el diccionario.
 
 """
+from shared.logger import get_logger
+
+log = get_logger("keyword_router")
 
 KEYWORDS = {
         "hr": [
@@ -90,8 +90,8 @@ class KeywordRouter:
         """
         try:
             if not query or not query.strip():
-                print(f"[KeywordRouter] Query vacía, usando fallback: "
-                      f"'{self.fallback_domain}'")
+                log.info(f"[KeywordRouter] Query vacía, usando fallback: "
+                         f"'{self.fallback_domain}'")
                 return self.fallback_domain
 
             query_normalized = query.lower().strip()
@@ -108,15 +108,15 @@ class KeywordRouter:
             best_score = scores[best_domain]
 
             if best_score == 0:
-                print(f"[KeywordRouter] Sin coincidencias para '{query}'. "
-                      f"Usando fallback: '{self.fallback_domain}'")
+                log.info(f"[KeywordRouter] Sin coincidencias para '{query}'. "
+                         f"Usando fallback: '{self.fallback_domain}'")
                 return self.fallback_domain
 
-            print(f"[KeywordRouter] Query: '{query}' -> "
-                  f"dominio: '{best_domain}' (score: {best_score})")
+            log.info(f"[KeywordRouter] Query: '{query}' -> "
+                     f"dominio: '{best_domain}' (score: {best_score})")
             return best_domain
 
         except Exception as e:
-            print(f"[KeywordRouter] Error inesperado: {e}. "
-                  f"Usando fallback: '{self.fallback_domain}'")
+            log.error(f"[KeywordRouter] Error inesperado: {e}. "
+                      f"Usando fallback: '{self.fallback_domain}'")
             return self.fallback_domain

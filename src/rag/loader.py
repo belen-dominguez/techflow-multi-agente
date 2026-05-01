@@ -2,7 +2,9 @@ from pathlib import Path
 from typing import List
 
 from langchain_core.documents import Document
+from shared.logger import get_logger
 
+log = get_logger("DocumentLoader")
 
 class DocumentLoader:
     """Carga archivos de texto desde una carpeta y los convierte en Document de LangChain."""
