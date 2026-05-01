@@ -5,6 +5,8 @@
 
 
 faiss_db/
+outputs/*
+!outputs/.gitkeep
 
 # Python
 __pycache__/
