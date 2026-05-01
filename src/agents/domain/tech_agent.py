@@ -6,7 +6,7 @@ usando RAG sobre la documentación interna de Tech de TechFlow.
 
 """
 
-from agents.base_agent import BaseRAGAgent
+from agents.base.base_agent import BaseRAGAgent
 from prompts.template import RAG_AGENT_PROMPT
 from shared.logger import get_logger
 

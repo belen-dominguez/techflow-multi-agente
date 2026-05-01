@@ -8,14 +8,14 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
-from agents import factory
-from agents.factory import AgentFactory
-from agents.fallback_agent import FallbackAgent
-from agents.finance_agent import FinanceAgent
-from agents.hr_agent import HRAgent
-from agents.orchestrator import Orchestrator
-from agents.tech_agent import TechAgent
-from agents.evaluator_agent import EvaluatorAgent
+from agents.factory import factory
+from agents.factory.factory import AgentFactory
+from agents.system.fallback_agent import FallbackAgent
+from agents.domain.finance_agent import FinanceAgent
+from agents.domain.hr_agent import HRAgent
+from agents.system.orchestrator import Orchestrator
+from agents.domain.tech_agent import TechAgent
+from agents.system.evaluator_agent import EvaluatorAgent
 from rag.pipeline import RAGPipeline
 from routing.keyword_router import  KeywordRouter
 from shared.config_loader import ConfigLoader

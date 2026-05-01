@@ -1,7 +1,7 @@
 
-from agents.finance_agent import FinanceAgent
-from agents.hr_agent import HRAgent
-from agents.tech_agent import TechAgent
+from agents.domain.finance_agent import FinanceAgent
+from agents.domain.hr_agent import HRAgent
+from agents.domain.tech_agent import TechAgent
 from rag.pipeline import RAGPipeline
 
 
