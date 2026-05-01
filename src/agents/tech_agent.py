@@ -5,37 +5,19 @@ Responsabilidad: responder consultas sobre IT y Tecnología
 usando RAG sobre la documentación interna de Tech de TechFlow.
 
 """
-from typing import Any, Dict
 
+from agents.base_agent import BaseRAGAgent
 from prompts.template import RAG_AGENT_PROMPT
 from shared.logger import get_logger
 
 DOMAIN_NAME = "Tecnología (Tech)"
 log = get_logger("tech_agent")
 
-class TechAgent:
-    """Agente especializado en consultas de IT y Tecnología.
-
-    Recupera chunks de la base de conocimiento de Tech
-    y genera respuestas fundamentadas en esa documentación.
-    """
-
-    def __init__(self, retriever: Any, llm: Any):
-        """Inicializa el agente con el retriever y el LLM."""
-        self.retriever = retriever
-        self.llm = llm
-
-    def answer(self, question: str) -> Dict:
-        """Responde una pregunta usando el retriever y el modelo de lenguaje."""
-        chunks = self.retriever.retrieve(question)
-
-        context = "\n\n".join(chunk.page_content for chunk in chunks)
-        prompt = RAG_AGENT_PROMPT.format(
-                domain=DOMAIN_NAME,
-                context=context,
-                question=question,
-            )
-
-        response = self.llm.invoke(prompt)
-        log.info(f"[TechAgent] Respondiendo: '{response.content if hasattr(response, 'content') else str(response)}'")   
-        return {"response": response.content if hasattr(response, 'content') else str(response), "prompt": prompt, }
+class TechAgent(BaseRAGAgent):
+    def __init__(self, retriever, llm):
+        super().__init__(
+            retriever=retriever,
+            llm=llm,
+            domain_name=DOMAIN_NAME,
+            logger=log
+        )

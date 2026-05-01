@@ -11,6 +11,10 @@
     "query": "¿Cómo es el proceso de onboarding para empleados nuevos?",
     "expected_domain": "hr"
   },
+    {
+    "query": "¿Que pasa si no voy a trabajar?",
+    "expected_domain": "unknown"
+  },
   {
     "query": "No puedo acceder a mi cuenta de Slack, ¿qué hago?",
     "expected_domain": "tech"
@@ -22,6 +26,10 @@
   {
     "query": "Mi laptop corporativa no enciende, ¿a quién contacto?",
     "expected_domain": "tech"
+  },
+      {
+    "query": "¿Donde puedo comprar el cosito del cosito que va en el coso?",
+    "expected_domain": "unknown"
   },
   {
     "query": "¿Cuál es el límite de hotel permitido por noche en viajes?",

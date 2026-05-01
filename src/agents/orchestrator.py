@@ -6,9 +6,10 @@ su intención usando el router, y delegarla al agente correcto.
 
 """
 from typing import Any,  Dict
+from shared.config_loader import ConfigLoader
 from shared.logger import get_logger
 
-
+config = ConfigLoader()
 log = get_logger("orchestrator")
 
 class Orchestrator:
@@ -30,6 +31,7 @@ class Orchestrator:
         self.router = router
         self.agents = agents
         self.tracer = tracer
+        self.fallback_domain = config.get("routing.fallback_domain", "unknown")
 
     def route(self, question: str) -> dict:
         """Clasifica la consulta y la envía al agente adecuado."""
@@ -46,8 +48,8 @@ class Orchestrator:
             # Paso 2: si el dominio no tiene agente, usamos el fallback
             if domain not in self.agents:
                 log.info(f"[Orchestrator] Dominio '{domain}' sin agente. "
-                        f"Usando fallback: 'hr'")
-                domain = "hr"
+                        f"Usando fallback: '{self.fallback_domain}'")
+                domain = self.fallback_domain
 
             
             self.tracer.set_output({
@@ -61,14 +63,24 @@ class Orchestrator:
                 # Paso 3: delegar al agente
                 result = self.agents[domain].answer(question)
                 
-                self.tracer.set_output({"prompt": result["prompt"], "response": result["response"]})
+                # self.tracer.set_output({"prompt": result["prompt"], "response": result["response"]})
+                self.tracer.set_output({
+                    "prompt": result.get("prompt", None),
+                    "response": result.get("response", "")
+                })
 
                 result["routed_by"] = self.router.__class__.__name__
 
+                # return {
+                #     "domain": domain,
+                #     "answer":result["response"],
+                #     "prompt":  result["prompt"],
+                #     "routed_by": "keyword_router"              
+                # }        
                 return {
                     "domain": domain,
-                    "answer":result["response"],
-                    "prompt":  result["prompt"],
-                    "routed_by": "keyword_router"              
-                }        
+                    "answer": result.get("response", ""),
+                    "prompt": result.get("prompt"),
+                    "routed_by": "keyword_router"
+                }
 

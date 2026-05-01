@@ -32,7 +32,7 @@ documents:
 
 routing:
   strategy: "keyword" # "keyword" o "llm"
-  fallback_domain: "hr"
+  fallback_domain: "unknown"
 
 
 langfuse:

@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 from agents import factory
 from agents.factory import AgentFactory
+from agents.fallback_agent import FallbackAgent
 from agents.finance_agent import FinanceAgent
 from agents.hr_agent import HRAgent
 from agents.orchestrator import Orchestrator
@@ -46,6 +47,8 @@ def main():
    
     factory = AgentFactory(config, embeddings, llm)
     agents = factory.create_agents()
+    agents["unknown"] = FallbackAgent()
+    
     log.info(f"Agentes creados.")
     router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "hr"))
     log.info(f"Router creado.")

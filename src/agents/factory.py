@@ -1,6 +1,4 @@
 
-
-
 from agents.finance_agent import FinanceAgent
 from agents.hr_agent import HRAgent
 from agents.tech_agent import TechAgent
