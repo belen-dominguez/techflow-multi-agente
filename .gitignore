@@ -5,6 +5,7 @@
 
 
 faiss_db/
+faiss_index/
 outputs/*
 !outputs/.gitkeep
 
