@@ -4,19 +4,9 @@ orchestrator.py
 Responsabilidad: recibir la consulta del usuario, clasificar
 su intención usando el router, y delegarla al agente correcto.
 
-Uso:
-    from agents.orchestrator import Orchestrator
-
-    orchestrator = Orchestrator(
-        router=router,
-        agents={"hr": hr_agent, "tech": tech_agent, "finance": finance_agent},
-    )
-    result = orchestrator.route("¿Cuántos días de vacaciones tengo?")
 """
-from typing import Any, Callable, Dict
-import uuid
+from typing import Any,  Dict
 
-from shared import tracer
 
 class Orchestrator:
     """Clasifica la consulta del usuario y la delega al agente especializado correspondiente."""
@@ -39,20 +29,11 @@ class Orchestrator:
         self.tracer = tracer
 
     def route(self, question: str) -> dict:
-        # """Clasifica la consulta y la envía al agente adecuado."""
-        # domain = self.router.route(question)
-
-        # if domain not in self.agents:
-        #     raise ValueError(f"Dominio '{domain}' no tiene agente asignado.")
-
-        # agent = self.agents[domain]
-        # answer = agent.answer(question)
-        # return {"domain": domain, "answer": answer, "routed_by": self.router.__class__.__name__}
-
+        """Clasifica la consulta y la envía al agente adecuado."""
+       
         if not question or not question.strip():
                 raise ValueError("La consulta no puede estar vacía.")
-        
-         
+              
 
         with self.tracer.start_span("orchestrator"):
 
@@ -70,11 +51,11 @@ class Orchestrator:
                 "selected_agent": domain
             })
 
-            # Paso 3: delegar al agente
+    
             print(f"[Orchestrator] Enrutando a agente '{domain}'...")
 
             with self.tracer.start_span(domain):
-
+                # Paso 3: delegar al agente
                 result = self.agents[domain].answer(question)
                 
                 self.tracer.set_output({"prompt": result["prompt"], "response": result["response"]})
@@ -88,11 +69,3 @@ class Orchestrator:
                     "routed_by": "keyword_router"              
                 }        
 
-
-    def add_agent(self, domain: str, agent: Any) -> None:
-        """Agrega o reemplaza un agente para un dominio específico."""
-        self.agents[domain] = agent
-
-    def get_agent(self, domain: str) -> Any:
-        """Retorna el agente asignado a un dominio."""
-        return self.agents.get(domain)

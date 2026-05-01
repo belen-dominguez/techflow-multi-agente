@@ -1,23 +1,8 @@
-"""
-main.py
--------
-Script para probar el pipeline RAG completo.
 
-Demuestra:
-  1. Carga de documentos con DocumentLoader
-  2. División en chunks con Chunker
-  3. Generación de embeddings y creación de índice FAISS con EmbeddingStore
-  4. Búsquedas semánticas con Retriever
-  5. Orquestación completa con RAGPipeline
-"""
 import json
 import os
 from pathlib import Path
-from unittest import result
 
-from shared import tracer
-
-ROOT_DIR = Path(__file__).parent.parent
 
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
@@ -32,6 +17,8 @@ from rag.pipeline import RAGPipeline
 from routing.keyword_router import  KeywordRouter
 from shared.config_loader import ConfigLoader
 from shared.tracer import Tracer
+
+ROOT_DIR = Path(__file__).parent.parent
 
 load_dotenv()
 
@@ -99,13 +86,11 @@ def main():
             result = orchestrator.route(query)
             match  = "✓" if result["domain"] == expected else "✗"
 
-    
             # 2. Evaluamos la respuesta
             evaluation = evaluator.evaluate(
                 query=query,
                 answer=result["answer"],
             )
-
 
             tracer.add_score(
                 trace_id=trace_id,
@@ -120,8 +105,6 @@ def main():
     
             # 4. Mostramos en terminal
             print(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
-            # print(f"   Pregunta: {query}")
-            # print(f"   Respuesta: {result['answer'][:200]}...")
             print(f"   Evaluación: relevance: {evaluation['relevance']}/10, accuracy: {evaluation['accuracy']}/10, completeness: {evaluation['completeness']}/10 — {evaluation['reasoning']}")
             print("=" * 60)
 

@@ -4,10 +4,6 @@ finance_agent.py
 Responsabilidad: responder consultas sobre Finanzas
 usando RAG sobre la documentación interna de Finance de TechFlow.
 
-Uso:
-    from agents.finance_agent import FinanceAgent
-
-    agent = FinanceAgent(retriever=retriever, llm=llm)
 """
 from typing import Any, Dict
 

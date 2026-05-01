@@ -9,12 +9,6 @@ Ventajas:   rápido, sin costo de tokens, predecible.
 Desventajas: frágil ante consultas ambiguas o con vocabulario
              que no está en el diccionario.
 
-Uso:
-    from routing.keyword_router import KeywordRouter
-
-    router = KeywordRouter()
-    domain = router.route("¿Cuántos días de vacaciones tengo?")
-    # -> "hr"
 """
 
 KEYWORDS = {

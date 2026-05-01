@@ -4,11 +4,6 @@ tech_agent.py
 Responsabilidad: responder consultas sobre IT y Tecnología
 usando RAG sobre la documentación interna de Tech de TechFlow.
 
-Uso:
-    from agents.tech_agent import TechAgent
-
-    agent = TechAgent(retriever=retriever, llm=llm)
-    result = agent.answer("¿Cómo solicito acceso a un sistema?")
 """
 from typing import Any, Dict
 

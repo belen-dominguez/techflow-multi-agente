@@ -4,17 +4,10 @@ hr_agent.py
 Responsabilidad: responder consultas sobre Recursos Humanos
 usando RAG sobre la documentación interna de HR de TechFlow.
 
-Uso:
-    from agents.hr_agent import HRAgent
 
-    agent = HRAgent(retriever=retriever, llm=llm)
-    result = agent.answer("¿Cuántos días de vacaciones tengo?")
 """
 
 from typing import Any, Dict
-from urllib import response
-
-from prompt_toolkit import prompt
 
 from prompts.template import RAG_AGENT_PROMPT
 

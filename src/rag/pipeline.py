@@ -1,5 +1,5 @@
 
-from typing import Any, Optional
+from typing import  Optional
 
 from langchain.embeddings.base import Embeddings
 from langchain_core.documents import Document
