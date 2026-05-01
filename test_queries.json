@@ -20,7 +20,7 @@
     "expected_domain": "unknown"
   },
   {
-    "query": "No puedo acceder a mi cuenta de Slack, ¿qué hago?",
+    "query": "Estoy viendo errores en produccion, ¿qué hago?",
     "expected_domain": "tech"
   },
   {

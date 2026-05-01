@@ -113,14 +113,15 @@ def main():
                     comment=evaluation["reasoning"]
                 )
 
-                match = "✓" if result["domain"] == expected else "✗"
+                match = "✔" if result["domain"] == expected else "✖"
 
                 log.info(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
                 log.info(f"Evaluación: {evaluation}")
                 print("=" * 50)
                 results.append({
-                    **result,
+                    "query": query,
                     "expected_domain": expected,
+                    **result,
                     "evaluation": evaluation
                 })
 
