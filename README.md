@@ -47,7 +47,7 @@ Tracer → registra ejecución
 ```text
 M3-PROJECT-V2/
 │
-├── data/                          # Documentos base por dominio
+├── data/                          # Documentos base por dominio (RAG)
 │   ├── hr_docs/
 │   │   └── manual_rrhh.txt
 │   ├── tech_docs/
@@ -55,44 +55,56 @@ M3-PROJECT-V2/
 │   └── finance_docs/
 │       └── manual_finanzas.txt
 │
+│
 ├── outputs/                       # Resultados de ejecución
 │   └── test_results.json
 │
 ├── src/
-│   ├── agents/                   # Lógica de agentes
-│   │   ├── hr_agent.py
-│   │   ├── tech_agent.py
-│   │   ├── finance_agent.py
-│   │   ├── orchestrator.py       # Coordina el flujo
-│   │   └── evaluator_agent.py    # Evalúa respuestas
 │   │
-│   ├── rag/                      # Pipeline RAG
-│   │   ├── pipeline.py           # Orquesta el RAG
-│   │   ├── loader.py             # Carga documentos
-│   │   ├── chunker.py            # Divide en chunks
-│   │   ├── embeddings.py         # Genera embeddings
-│   │   └── retriver.py           # Búsqueda semántica
+│   ├── agents/                    # Sistema multi-agente
+│   │   ├── base/                  # Lógica base reutilizable
+│   │   │   └── base_agent.py
+│   │   │
+│   │   ├── domain/                # Agentes por dominio
+│   │   │   ├── hr_agent.py
+│   │   │   ├── tech_agent.py
+│   │   │   └── finance_agent.py
+│   │   │
+│   │   ├── system/                # Orquestación y control
+│   │   │   ├── orchestrator.py
+│   │   │   ├── evaluator_agent.py
+│   │   │   └── fallback_agent.py
+│   │   │
+│   │   └── factory/               # Creación de agentes
+│   │       └── factory.py
 │   │
-│   ├── routing/                  # Enrutamiento de queries
+│   ├── rag/                       # Pipeline RAG
+│   │   ├── pipeline.py
+│   │   ├── loader.py
+│   │   ├── chunker.py
+│   │   ├── embeddings.py
+│   │   └── retriver.py
+│   │
+│   ├── routing/                   # Enrutamiento de consultas
 │   │   └── keyword_router.py
 │   │
-│   ├── prompts/                  # Templates de prompts
+│   ├── prompts/                   # Templates de prompts
 │   │   └── template.py
 │   │
-│   └── shared/                   # Utilidades compartidas
+│   └── shared/                    # Utilidades compartidas
 │       ├── config_loader.py
-│       └── tracer.py
+│       ├── logger.py
+│       ├── tracer.py
+│       └── io.py
 │
-├── faiss_index/                  # Índices vectoriales persistidos
-├── outputs/                      # Resultados generados
-│
-├── main.py                       # Punto de entrada del sistema
-├── config.yaml                   # Configuración general
-├── test_queries.json             # Casos de prueba
-├── requirements.txt              # Dependencias
+├── main.py                        # Punto de entrada
+├── config.yaml                    # Configuración del sistema
+├── test_queries.json              # Casos de prueba
+├── requirements.txt               # Dependencias
 ├── .env.example
 └── README.md
 ```
+
 
 
 ---

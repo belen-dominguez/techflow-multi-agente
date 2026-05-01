@@ -19,6 +19,7 @@ from agents.system.evaluator_agent import EvaluatorAgent
 from rag.pipeline import RAGPipeline
 from routing.keyword_router import  KeywordRouter
 from shared.config_loader import ConfigLoader
+from shared.io import save_results
 from shared.logger import get_logger
 from shared.tracer import Tracer
 
@@ -121,11 +122,7 @@ def main():
  
     # Guardamos resultados
     try:
-        (ROOT_DIR / "outputs").mkdir(exist_ok=True)
-
-        with open(ROOT_DIR / "outputs" / "test_results.json", "w", encoding="utf-8") as f:
-            json.dump(results, f, ensure_ascii=False, indent=2)
-
+       save_results(results, ROOT_DIR)
     except Exception as e:
         log.error(f"No se pudieron guardar los resultados: {e}")
     
