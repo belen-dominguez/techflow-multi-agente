@@ -1,0 +1,188 @@
+TECHFLOW - SOPORTE IT Y GESTIÓN DE ACCESOS
+==========================================
+
+MESA DE AYUDA IT
+-----------------
+
+El equipo de IT Support de TechFlow está disponible de lunes a viernes de 8:00 a 20:00 hs. Para incidentes críticos fuera de horario (sistemas de producción caídos, brechas de seguridad), existe una guardia disponible las 24 horas los 7 días de la semana.
+
+Los canales de contacto con IT Support son:
+- Canal de Slack: #it-support (para consultas generales y no urgentes)
+- Portal de tickets: it.techflow.internal (para seguimiento formal de incidentes)
+- Teléfono de guardia: disponible en el portal para incidentes críticos fuera de horario
+
+Los tickets se clasifican por prioridad y tienen SLAs definidos:
+- Crítico (sistema de producción caído): respuesta en 30 minutos, resolución en 4 horas
+- Alto (empleado sin acceso a sistemas clave): respuesta en 2 horas, resolución en 8 horas
+- Medio (problema funcional con workaround disponible): respuesta en 4 horas, resolución en 2 días hábiles
+- Bajo (consultas, mejoras, solicitudes no urgentes): respuesta en 1 día hábil, resolución en 5 días hábiles
+
+GESTIÓN DE ACCESOS Y PERMISOS
+-------------------------------
+
+El acceso a todos los sistemas de TechFlow sigue el principio de mínimo privilegio: cada empleado recibe únicamente los accesos necesarios para desempeñar su rol. Los accesos adicionales requieren aprobación formal.
+
+SOLICITUD DE ACCESOS NUEVOS
+
+Para solicitar acceso a un sistema o herramienta no incluido en el paquete estándar del rol, el empleado debe abrir un ticket en el portal IT con los siguientes datos: sistema requerido, justificación de negocio, y aprobación del manager (puede adjuntarse como captura del correo de aprobación).
+
+IT evalúa la solicitud en función de las políticas de seguridad y responde dentro del SLA correspondiente. Algunos sistemas requieren aprobación adicional del responsable del área (por ejemplo, acceso a datos de clientes requiere aprobación del DPO).
+
+BAJA DE ACCESOS
+
+Cuando un empleado cambia de rol o se desvincula, su manager debe notificar a IT de forma inmediata para iniciar la revisión y baja de accesos. En caso de desvinculación, todos los accesos se revocan dentro de las 24 horas de la fecha de egreso.
+
+GESTIÓN DE CONTRASEÑAS
+
+TechFlow utiliza 1Password como gestor de contraseñas corporativo. Todos los empleados tienen acceso a una bóveda individual y a las bóvedas compartidas de su equipo. Está estrictamente prohibido compartir contraseñas por Slack, correo u otros canales no seguros.
+
+Las contraseñas deben cumplir los siguientes requisitos mínimos: mínimo 12 caracteres, combinación de mayúsculas, minúsculas, números y símbolos, sin reutilización de las últimas 10 contraseñas.
+
+AUTENTICACIÓN DE DOS FACTORES (2FA)
+
+El 2FA es obligatorio para todos los sistemas de TechFlow sin excepción. Se utiliza la aplicación Okta Verify como autenticador principal. En caso de pérdida del dispositivo con el autenticador, el empleado debe contactar a IT Support de forma inmediata para restablecer el acceso de forma segura.
+
+EQUIPOS Y HARDWARE
+-------------------
+
+SOLICITUD DE EQUIPAMIENTO ADICIONAL
+
+Los empleados pueden solicitar equipamiento adicional (monitor externo, teclado ergonómico, dock, etc.) a través del portal IT. Las solicitudes deben ser aprobadas por el manager y están sujetas al presupuesto de equipamiento del área.
+
+REPARACIONES Y REEMPLAZOS
+
+En caso de falla del equipo corporativo, el empleado debe abrir un ticket en IT con descripción del problema. IT evalúa si el equipo puede repararse o si corresponde reemplazo. Durante el proceso, IT puede proveer un equipo de préstamo para no interrumpir el trabajo.
+
+Los equipos con daño físico por mal uso o negligencia pueden generar un cargo al empleado. IT documenta el estado del equipo al momento de la entrega y al momento de la devolución.
+
+POLÍTICA DE DISPOSITIVOS PERSONALES (BYOD)
+
+TechFlow no permite el uso de dispositivos personales para acceder a sistemas corporativos, salvo excepciones aprobadas explícitamente por IT y el CISO. En los casos permitidos, el dispositivo personal debe tener instalado el agente de gestión de endpoints de TechFlow (Jamf o Microsoft Intune según corresponda).
+TECHFLOW - INFRAESTRUCTURA Y HERRAMIENTAS CORPORATIVAS
+=======================================================
+
+STACK TECNOLÓGICO CORPORATIVO
+-------------------------------
+
+TechFlow estandariza el uso de las siguientes herramientas para garantizar la colaboración y la seguridad en toda la organización. El uso de herramientas fuera del stack aprobado requiere autorización de IT y del área correspondiente.
+
+COMUNICACIÓN Y COLABORACIÓN
+
+Slack es la herramienta principal de comunicación interna. Cada equipo tiene sus canales dedicados. Los canales que comienzan con # son públicos y visibles para toda la organización. Los canales con 🔒 son privados y requieren invitación. Se espera que todos los empleados estén disponibles en Slack durante su horario de trabajo.
+
+Google Workspace es la suite de productividad estándar: Gmail para correo corporativo, Google Drive para almacenamiento y colaboración en documentos, Google Meet para videollamadas. Todos los empleados tienen cuenta @techflow.io.
+
+Confluence es la wiki corporativa donde se documenta todo el conocimiento de la empresa: procesos, decisiones técnicas, runbooks, políticas internas. Cada equipo tiene su propio espacio. Se espera que toda documentación relevante esté en Confluence y no dispersa en documentos de Drive.
+
+GESTIÓN DE PROYECTOS Y DESARROLLO
+
+Jira es la herramienta de gestión de proyectos para los equipos de desarrollo y producto. Los equipos de otras áreas pueden usar Jira o solicitar acceso a tableros específicos según necesidad.
+
+GitHub es el repositorio de código fuente. Todo el código de TechFlow vive en la organización github.com/techflow-io. El acceso es gestionado por IT y por los tech leads de cada equipo. Se requiere autenticación con SSO corporativo.
+
+Notion se usa como complemento de Confluence para notas de reuniones, documentos en borrador y proyectos colaborativos de áreas no técnicas (Marketing, Ventas, RRHH).
+
+INFRAESTRUCTURA CLOUD
+----------------------
+
+TechFlow opera principalmente en AWS (Amazon Web Services) como proveedor cloud principal. Los entornos están organizados en tres capas: desarrollo (dev), staging (stg) y producción (prod).
+
+El acceso a los entornos cloud es gestionado centralmente por el equipo de DevOps a través de AWS IAM con roles y políticas de mínimo privilegio. Ningún empleado debe tener credenciales de AWS de larga duración en su máquina local; el acceso se realiza a través de roles temporales con AWS SSO.
+
+El acceso al entorno de producción es restringido. Solo los miembros del equipo de DevOps/SRE y los tech leads tienen acceso directo. Cualquier cambio en producción debe seguir el proceso de change management documentado en Confluence.
+
+MONITOREO Y OBSERVABILIDAD
+
+TechFlow utiliza Datadog como plataforma centralizada de monitoreo, logs y trazas. Todos los servicios de producción deben estar instrumentados con métricas, logs estructurados y trazas de distributed tracing.
+
+Las alertas críticas de producción se envían al canal de Slack #alerts-critical y activan al equipo de guardia. El runbook de cada alerta debe estar documentado en Confluence con los pasos de diagnóstico y resolución.
+
+PagerDuty gestiona las rotaciones de guardia y el escalado de incidentes. Todos los miembros del equipo de ingeniería participan en la rotación de guardia según el schedule definido por cada equipo.
+
+SEGURIDAD DE LA INFORMACIÓN
+-----------------------------
+
+VPN: el acceso a sistemas internos desde redes externas requiere conexión a la VPN corporativa (Tailscale). La VPN está disponible para todos los empleados y debe usarse siempre que se trabaje desde redes públicas o no confiables.
+
+Cifrado: todos los laptops corporativos tienen cifrado de disco completo habilitado (FileVault en Mac, BitLocker en Windows). Los empleados no deben deshabilitarlo bajo ninguna circunstancia.
+
+Actualizaciones: los equipos corporativos aplican actualizaciones de seguridad de forma automática. Los empleados no deben posponer las actualizaciones del sistema operativo por más de 7 días.
+
+Reporte de incidentes de seguridad: cualquier sospecha de incidente de seguridad (phishing, malware, acceso no autorizado, pérdida de dispositivo) debe reportarse de inmediato al canal #security-incidents en Slack y al correo security@techflow.io. La respuesta rápida es crítica para minimizar el impacto.
+
+POLÍTICA DE BACKUPS
+--------------------
+
+Todos los datos críticos de TechFlow se respaldan automáticamente. Los backups de bases de datos de producción se realizan cada hora con retención de 30 días. Los documentos en Google Drive y Confluence se respaldan diariamente.
+
+Los empleados no deben almacenar datos críticos de negocio exclusivamente en sus laptops locales sin sincronización a Google Drive u otro sistema respaldado. La pérdida de información por falta de backup puede generar impacto operativo severo.
+TECHFLOW - PROCESOS DE DESARROLLO Y DEPLOYMENTS
+================================================
+
+CICLO DE DESARROLLO
+--------------------
+
+TechFlow sigue metodología ágil con sprints de dos semanas. Cada sprint comienza con una sesión de planning donde el equipo selecciona los ítems del backlog a trabajar. Al finalizar el sprint se realiza una demo de los cambios completados y una retrospectiva para mejorar el proceso.
+
+El backlog es gestionado en Jira por el Product Manager de cada equipo. Las historias de usuario deben tener criterios de aceptación claros antes de ser llevadas a un sprint. Los bugs críticos de producción pueden incorporarse al sprint en curso con aprobación del tech lead.
+
+FLUJO DE TRABAJO EN GIT
+------------------------
+
+TechFlow utiliza el modelo de branching GitFlow adaptado. La rama principal es `main` y representa siempre el estado de producción. Para cada feature o bugfix se crea una rama desde `main` con el formato:
+
+- Features: feature/JIRA-123-descripcion-breve
+- Bugfixes: fix/JIRA-456-descripcion-breve
+- Hotfixes de producción: hotfix/descripcion-breve
+
+Los commits deben ser atómicos y descriptivos. El mensaje de commit debe comenzar con el número de ticket de Jira cuando aplica (ej: "JIRA-123: Agrega validación de email en formulario de registro").
+
+PULL REQUESTS Y CODE REVIEW
+-----------------------------
+
+Todo el código debe pasar por un Pull Request (PR) antes de mergearse a `main`. Los PRs deben:
+- Tener una descripción clara de los cambios realizados y el ticket de Jira asociado
+- Pasar todos los checks automáticos (tests, linting, análisis de seguridad)
+- Recibir aprobación de al menos 2 reviewers del equipo
+- No tener conflictos sin resolver
+
+Los reviewers tienen 24 horas hábiles para revisar un PR. Si no hay respuesta, el autor puede hacer un ping en el canal del equipo. El objetivo es que ningún PR esté bloqueado más de 2 días hábiles.
+
+Los comentarios de code review deben ser constructivos y explicar el razonamiento detrás de cada sugerencia. Los comentarios marcados como "bloqueantes" deben resolverse antes del merge; los marcados como "sugerencia" son opcionales.
+
+TESTING
+--------
+
+TechFlow requiere que todo el código nuevo tenga cobertura de tests. Los estándares mínimos son:
+- Unit tests: cobertura mínima del 80% para lógica de negocio nueva
+- Integration tests: para todos los endpoints de API nuevos o modificados
+- E2E tests: para flujos críticos de usuario (definidos por el equipo de QA)
+
+Los tests se ejecutan automáticamente en cada PR a través de GitHub Actions. Un PR con tests fallando no puede mergearse. El tech lead puede autorizar excepciones documentadas en casos muy específicos.
+
+PROCESO DE DEPLOYMENT
+----------------------
+
+TechFlow tiene tres entornos: development (dev), staging (stg) y production (prod).
+
+Dev: cada desarrollador puede hacer deploy de su rama a dev libremente para pruebas. El entorno de dev puede estar inestable y no se usa para demos con clientes.
+
+Staging: el merge a `main` dispara automáticamente un deploy a staging. Staging es un espejo de producción y se usa para validación final antes del release. Los QA realizan sus pruebas de aceptación en staging.
+
+Producción: los deploys a producción se realizan los martes y jueves a las 14:00 hs, salvo hotfixes urgentes. El proceso requiere aprobación del tech lead y del release manager. Existe un período de observación de 30 minutos post-deploy donde el equipo monitorea las métricas clave.
+
+ROLLBACK
+
+Si un deploy a producción genera incidentes, el procedimiento estándar es hacer rollback inmediato a la versión anterior antes de investigar la causa raíz. El proceso de rollback está documentado en el runbook de deployments en Confluence y puede completarse en menos de 5 minutos.
+
+GESTIÓN DE INCIDENTES DE PRODUCCIÓN
+-------------------------------------
+
+Cuando se detecta un incidente en producción, el proceso es:
+1. El primero en detectarlo abre un canal de incidente en Slack con el formato #inc-YYYYMMDD-descripcion
+2. Se designa un Incident Commander (IC) que coordina la respuesta
+3. El IC actualiza el canal cada 30 minutos con el estado hasta la resolución
+4. Post-resolución, se realiza un postmortem sin culpas dentro de los 5 días hábiles
+5. El postmortem documenta causa raíz, timeline, impacto y acciones correctivas
+
+Los postmortems se publican en Confluence y son accesibles para toda la ingeniería. TechFlow promueve una cultura de aprendizaje: el objetivo del postmortem es entender y prevenir, no encontrar culpables.

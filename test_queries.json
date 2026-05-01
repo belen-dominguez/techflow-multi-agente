@@ -1,0 +1,38 @@
+[
+  {
+    "query": "¿Cómo solicito una licencia por maternidad?",
+    "expected_domain": "hr"
+  },
+  {
+    "query": "¿Cuándo se paga el bono anual de desempeño?",
+    "expected_domain": "hr"
+  },
+  {
+    "query": "¿Cómo es el proceso de onboarding para empleados nuevos?",
+    "expected_domain": "hr"
+  },
+  {
+    "query": "No puedo acceder a mi cuenta de Slack, ¿qué hago?",
+    "expected_domain": "tech"
+  },
+  {
+    "query": "¿Cuál es el proceso para hacer un deploy a producción?",
+    "expected_domain": "tech"
+  },
+  {
+    "query": "Mi laptop corporativa no enciende, ¿a quién contacto?",
+    "expected_domain": "tech"
+  },
+  {
+    "query": "¿Cuál es el límite de hotel permitido por noche en viajes?",
+    "expected_domain": "finance"
+  },
+  {
+    "query": "¿Cuándo se cierra el mes contable?",
+    "expected_domain": "finance"
+  },
+  {
+    "query": "Quiero contratar un proveedor nuevo, ¿cuál es el proceso?",
+    "expected_domain": "finance"
+  }
+]

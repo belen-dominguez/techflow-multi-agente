@@ -1,0 +1,23 @@
+# LLM y embeddings
+langchain
+langchain-core
+langchain-openai
+langchain-text-splitters
+langgraph
+openai
+
+# Vector store
+faiss-cpu
+
+# Observabilidad
+langfuse
+
+# Utilidades
+python-dotenv
+pyyaml
+tiktoken
+
+# Jupyter
+jupyter
+ipykernel
+langchain-community

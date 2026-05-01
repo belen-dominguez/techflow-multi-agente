@@ -1,0 +1,44 @@
+# ============================================================
+#  CONFIGURACIÓN CENTRAL
+# ============================================================
+
+llm:
+  model: "gpt-4o-mini"      
+  temperature: 0.0            
+  max_tokens: 1000             
+
+
+embeddings:
+  model: "text-embedding-3-small"   
+
+chunking:
+  chunk_size: 300             
+  chunk_overlap: 50            
+
+
+retrieval:
+  top_k: 5                     
+
+
+vector_store:
+  persist_directory: "./faiss_db"   
+
+
+documents:
+  hr_path: "./data/hr_docs"
+  tech_path: "./data/tech_docs"
+  finance_path: "./data/finance_docs"
+
+
+routing:
+  strategy: "keyword" # "keyword" o "llm"
+  fallback_domain: "hr"
+
+
+langfuse:
+  enabled: true
+
+evaluator:
+  enabled: true
+  score_min: 1
+  score_max: 10

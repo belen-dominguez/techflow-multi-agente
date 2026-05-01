@@ -1,0 +1,189 @@
+TECHFLOW - POLÍTICA DE GASTOS Y REEMBOLSOS
+==========================================
+
+PRINCIPIOS GENERALES
+---------------------
+
+TechFlow confía en el criterio de sus empleados para realizar gastos razonables y necesarios para el negocio. La regla general es: gastá como si fuera tu propio dinero, pero sin limitarte cuando el gasto está justificado por el negocio.
+
+Todos los gastos deben tener un propósito de negocio claro y documentado. Los gastos sin justificación o fuera de política no serán reembolsados y pueden generar acciones disciplinarias si son recurrentes o de montos significativos.
+
+PROCESO DE REEMBOLSO
+---------------------
+
+Los gastos deben registrarse en la plataforma de gestión de gastos Expensify dentro de los 30 días de haber ocurrido. Gastos más antiguos no serán reembolsados salvo autorización excepcional del CFO.
+
+Para registrar un gasto en Expensify:
+1. Subir el comprobante o factura (foto o PDF)
+2. Completar la categoría, monto, fecha y descripción del propósito de negocio
+3. Asignar el centro de costo correspondiente (disponible en la lista dentro de Expensify)
+4. Enviar para aprobación del manager directo
+
+El manager tiene 5 días hábiles para aprobar o rechazar el gasto. Una vez aprobado por el manager, el equipo de Finanzas procesa el reembolso dentro de los 10 días hábiles siguientes. Los reembolsos se acreditan en la cuenta bancaria registrada en el sistema de RRHH.
+
+LÍMITES POR CATEGORÍA
+----------------------
+
+VIAJES
+
+Vuelos: se reservan siempre en clase económica para vuelos de hasta 6 horas. Para vuelos de más de 6 horas, se puede solicitar clase ejecutiva con aprobación previa del manager y del área de Finanzas. Las reservas deben realizarse con al menos 14 días de anticipación para optimizar costos; reservas tardías requieren justificación.
+
+Hotel: el límite estándar es de USD 200 por noche en destinos nacionales y USD 250 por noche en destinos internacionales. Destinos con costo de vida más alto (Nueva York, Londres, San Francisco, Tokio) tienen un límite especial de USD 350 por noche, requiriendo aprobación previa.
+
+Traslados: se prefiere el uso de transporte público o remises sobre taxis o Uber en la medida que sea seguro y práctico. Para viajes al aeropuerto con equipaje se acepta Uber o remis sin justificación adicional.
+
+Viáticos de alimentación durante viajes: USD 80 por día en destinos nacionales, USD 120 por día en destinos internacionales. No se requieren comprobantes individuales de comidas si el gasto total diario no supera el límite.
+
+COMIDAS DE NEGOCIO
+
+Las comidas con clientes, partners o candidatos son reembolsables. El límite es USD 100 por persona por comida. Deben documentarse los nombres de los asistentes y el propósito de la reunión en Expensify.
+
+Las comidas internas de equipo (team lunches, celebraciones) son reembolsables hasta USD 50 por persona con aprobación previa del manager. Deben realizarse máximo una vez por mes por equipo.
+
+CAPACITACIÓN Y CONFERENCIAS
+
+Los gastos de capacitación (cursos, libros, certificaciones) se gestionan a través del presupuesto de L&D asignado a cada empleado (ver política de beneficios en HR). No se procesan como reembolso directo sino como solicitud de pago anticipado a través de HR Connect.
+
+Las conferencias y eventos del sector se aprueban caso a caso. El empleado debe presentar una solicitud con al menos 30 días de anticipación, detallando el costo total estimado (inscripción, vuelo, hotel, viáticos) y el beneficio esperado para el equipo.
+
+TARJETA CORPORATIVA
+--------------------
+
+Los empleados con viajes frecuentes o gastos recurrentes de negocio pueden solicitar una tarjeta corporativa al área de Finanzas con aprobación del manager. La tarjeta está destinada exclusivamente a gastos de negocio; el uso personal está prohibido y puede resultar en acciones disciplinarias.
+
+Los gastos con tarjeta corporativa igualmente deben registrarse en Expensify con sus comprobantes dentro de los 30 días. Los saldos de la tarjeta se reconcilian mensualmente por el equipo de Finanzas.
+TECHFLOW - PRESUPUESTO Y REPORTES FINANCIEROS
+=============================================
+
+CICLO PRESUPUESTARIO
+---------------------
+
+TechFlow opera con un ciclo presupuestario anual. El proceso de planificación comienza en octubre de cada año para el año fiscal siguiente (que coincide con el año calendario: enero a diciembre).
+
+Durante octubre y noviembre, cada área presenta su propuesta presupuestaria al CFO, incluyendo: headcount proyectado, inversiones en herramientas y tecnología, gastos operativos estimados, y proyectos especiales. Las propuestas deben estar alineadas con los objetivos estratégicos de la empresa definidos por el CEO y el board.
+
+En diciembre, el CFO consolida las propuestas y realiza las negociaciones finales con cada área. El presupuesto aprobado se comunica a los managers de área antes del 15 de enero del año en curso.
+
+Las revisiones presupuestarias intermedias se realizan en julio (midyear review) para ajustar proyecciones según el desempeño del primer semestre. Reasignaciones de presupuesto entre categorías dentro de un área requieren aprobación del manager y notificación a Finanzas. Reasignaciones entre áreas requieren aprobación del CFO.
+
+CENTROS DE COSTO
+-----------------
+
+TechFlow organiza el presupuesto por centros de costo. Cada área tiene uno o varios centros de costo asignados. Al registrar cualquier gasto en Expensify o en el sistema contable, es obligatorio asignar el centro de costo correcto para garantizar la trazabilidad financiera.
+
+La lista actualizada de centros de costo está disponible en el portal de Finanzas y en Expensify. Si un empleado no sabe qué centro de costo asignar a un gasto, debe consultar con su manager o con el equipo de Finanzas antes de registrarlo incorrectamente.
+
+REPORTES FINANCIEROS
+---------------------
+
+REPORTES MENSUALES
+
+El equipo de Finanzas publica un reporte financiero mensual dentro de los 10 días hábiles del cierre de cada mes. El reporte incluye:
+- Estado de resultados (P&L): ingresos, costos y márgenes del mes y acumulado del año
+- Ejecución presupuestaria por área: gasto real vs. presupuestado
+- Indicadores clave (MRR, ARR, Churn, CAC, LTV) para la visión ejecutiva
+- Variaciones significativas respecto al mes anterior con análisis de causa
+
+Los reportes mensuales se distribuyen por correo a los managers de área y están disponibles en la carpeta compartida de Google Drive "Finanzas > Reportes > [Año]".
+
+REPORTES TRIMESTRALES
+
+Al cierre de cada trimestre, Finanzas prepara un reporte más detallado que incluye análisis de tendencias, proyecciones para el trimestre siguiente y actualización del forecast anual. Este reporte se presenta en la reunión de liderazgo (All Hands de managers) y se comparte con el board.
+
+CIERRE CONTABLE MENSUAL
+------------------------
+
+El cierre contable de cada mes se realiza los primeros 5 días hábiles del mes siguiente. Durante este período, el equipo de Finanzas consolida todas las transacciones, realiza ajustes contables y cierra los libros.
+
+Es importante que todos los gastos del mes sean registrados y aprobados en Expensify antes del último día hábil del mes para que sean incluidos en el cierre. Los gastos registrados fuera de tiempo se imputan al mes siguiente, lo que genera desvíos en el reporte presupuestario.
+
+AUDITORÍA INTERNA Y EXTERNA
+-----------------------------
+
+TechFlow realiza una auditoría interna trimestral de gastos y procesos financieros. El equipo de Finanzas selecciona una muestra de gastos y verifica que cumplan con las políticas de la empresa. Los resultados se reportan al CFO y, en caso de hallazgos significativos, al CEO.
+
+La auditoría externa anual se realiza en el primer trimestre del año siguiente al ejercicio auditado. La firma auditora externa tiene acceso a todos los registros contables y financieros de la empresa. Los empleados deben colaborar con las solicitudes de documentación de los auditores externos.
+
+INDICADORES FINANCIEROS CLAVE
+------------------------------
+
+MRR (Monthly Recurring Revenue): ingresos recurrentes mensuales. Indicador principal del crecimiento del negocio SaaS.
+
+ARR (Annual Recurring Revenue): MRR multiplicado por 12. Se usa para comparaciones con benchmarks del sector y para conversaciones con inversores.
+
+Churn Rate: porcentaje de clientes o ingresos perdidos en un período. TechFlow tiene como objetivo mantener el churn mensual por debajo del 1.5%.
+
+CAC (Customer Acquisition Cost): costo promedio de adquirir un nuevo cliente, incluyendo marketing y ventas. Se analiza en relación al LTV.
+
+LTV (Lifetime Value): valor total que un cliente promedio aporta durante su relación con TechFlow. La ratio LTV/CAC objetivo es mayor a 3x.
+
+Runway: meses de operación que TechFlow puede sostener con el cash disponible al ritmo de burn rate actual. Se reporta al board mensualmente.
+TECHFLOW - FACTURACIÓN Y GESTIÓN DE PROVEEDORES
+================================================
+
+PROCESO DE FACTURACIÓN A CLIENTES
+-----------------------------------
+
+TechFlow factura a sus clientes de forma mensual o anual según el plan contratado. La facturación se procesa de forma automática a través de la plataforma Stripe en la fecha de renovación del contrato de cada cliente.
+
+Los planes anuales tienen un descuento del 20% respecto al precio mensual equivalente y se facturan por adelantado al inicio del período. Los planes mensuales se facturan al inicio de cada mes por el mes en curso.
+
+Las facturas se envían automáticamente por correo al contacto de facturación registrado por el cliente. Si un cliente necesita actualizar su contacto de facturación, datos fiscales o método de pago, debe solicitarlo a su Customer Success Manager o directamente al equipo de Finanzas en billing@techflow.io.
+
+RETRASOS Y MORA
+----------------
+
+Las facturas tienen un vencimiento de 30 días desde la fecha de emisión para los clientes con facturación por transferencia bancaria. Los clientes con pago por tarjeta de crédito se debitan automáticamente en la fecha de vencimiento.
+
+Ante una factura vencida, el proceso de cobranza es:
+- Día 1 post-vencimiento: recordatorio automático por correo
+- Día 7 post-vencimiento: segundo recordatorio con aviso de posible suspensión
+- Día 15 post-vencimiento: el Customer Success Manager contacta al cliente directamente
+- Día 30 post-vencimiento: suspensión del servicio hasta regularización del pago
+- Día 60 post-vencimiento: el caso pasa al equipo legal para evaluación de acciones formales
+
+Los servicios suspendidos por mora se reestablecen dentro de las 24 horas de confirmada la regularización del pago.
+
+GESTIÓN DE PROVEEDORES
+-----------------------
+
+REGISTRO DE NUEVOS PROVEEDORES
+
+Para contratar un nuevo proveedor o herramienta que implique un gasto recurrente o un pago único mayor a USD 500, el área responsable debe completar el proceso de alta de proveedor:
+
+1. Completar el formulario de solicitud de nuevo proveedor en el portal de Finanzas
+2. Adjuntar: cotización del proveedor, justificación de negocio, y alternativas evaluadas
+3. Para gastos mayores a USD 5.000 anuales: aprobación del manager de área y del CFO
+4. Para gastos mayores a USD 20.000 anuales: aprobación adicional del CEO
+
+El equipo de Finanzas verifica los datos fiscales del proveedor y lo registra en el sistema contable. IT verifica que la herramienta o servicio cumpla con las políticas de seguridad antes de la aprobación final.
+
+PAGO A PROVEEDORES
+
+Los proveedores deben emitir factura formal a nombre de TechFlow con los datos fiscales correctos (disponibles en el portal de Finanzas). Las facturas se envían a accounts-payable@techflow.io o se cargan directamente al portal de proveedores.
+
+El proceso estándar de pago es:
+- Facturas hasta USD 1.000: pago dentro de los 15 días hábiles de recibida la factura aprobada
+- Facturas entre USD 1.000 y USD 10.000: pago dentro de los 30 días hábiles
+- Facturas mayores a USD 10.000: pago según las condiciones negociadas en el contrato
+
+Para ser procesada, la factura debe tener aprobación del responsable del área que contrató el servicio. Finanzas no procesa pagos de facturas sin aprobación interna documentada.
+
+CONTRATOS Y RENOVACIONES
+-------------------------
+
+Todos los contratos con proveedores deben ser revisados por el equipo legal antes de la firma. Los contratos con valor anual mayor a USD 10.000 requieren además la aprobación del CFO.
+
+Finanzas mantiene un registro centralizado de todos los contratos activos con sus fechas de renovación. El equipo de Finanzas notifica al área responsable con 60 días de anticipación a la renovación para que evalúe si desea continuar, renegociar o cancelar el contrato.
+
+La cancelación de un contrato debe comunicarse al proveedor según los plazos de aviso establecidos en cada contrato (usualmente 30 o 60 días). No respetar los plazos puede generar penalidades contractuales.
+
+HERRAMIENTAS SAAS Y LICENCIAS
+-------------------------------
+
+El equipo de Finanzas, en coordinación con IT, realiza una revisión semestral de todas las suscripciones SaaS activas para identificar:
+- Herramientas con bajo uso que pueden cancelarse o reducirse
+- Duplicidades (dos herramientas que cumplen la misma función)
+- Oportunidades de consolidación o renegociación de precios
+
+Los empleados que dejen de usar una herramienta contratada para su rol deben comunicarlo a IT para que se evalúe la liberación de la licencia. Las licencias no utilizadas representan un costo evitable para la empresa.

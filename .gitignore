@@ -1,0 +1,29 @@
+
+
+# Variables de entorno - NUNCA subir al repo
+.env
+
+
+faiss_db/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+
+.DS_Store
+Thumbs.db

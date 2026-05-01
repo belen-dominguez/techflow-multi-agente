@@ -1,0 +1,275 @@
+TECHFLOW - POLÍTICAS GENERALES DE EMPLEADOS
+===========================================
+
+POLÍTICA DE VACACIONES Y LICENCIAS
+-----------------------------------
+
+TechFlow otorga a todos los empleados de tiempo completo 15 días hábiles de vacaciones pagas por año. Los empleados que cumplan 3 años en la empresa acceden a 20 días anuales. Al cumplir 5 años, el beneficio sube a 25 días anuales.
+
+Las vacaciones deben solicitarse con un mínimo de 2 semanas de anticipación a través del portal interno HR Connect. Las solicitudes son aprobadas por el manager directo dentro de los 5 días hábiles. En períodos de alta demanda (enero y julio), las vacaciones pueden estar sujetas a restricciones por equipo.
+
+Los días de vacaciones no utilizados al cierre del año fiscal pueden acumularse hasta un máximo de 10 días. Los días que excedan ese límite se pierden. No se permite la monetización de días de vacaciones excepto al momento de la desvinculación.
+
+Los empleados tienen derecho a 3 días de licencia por asuntos personales por año. Estos días no se acumulan y no son monetizables. Deben solicitarse con al menos 24 horas de anticipación salvo casos de emergencia.
+
+LICENCIA POR ENFERMEDAD
+------------------------
+
+TechFlow otorga hasta 10 días hábiles por año de licencia por enfermedad paga. Para ausencias de más de 3 días consecutivos se requiere certificado médico. Las licencias por enfermedad no se acumulan de un año al otro.
+
+En caso de enfermedad de un hijo menor de 12 años, el empleado puede tomar hasta 5 días por año como licencia especial de cuidado, presentando el certificado médico del menor.
+
+LICENCIA POR MATERNIDAD Y PATERNIDAD
+--------------------------------------
+
+Las empleadas tienen derecho a 90 días corridos de licencia por maternidad paga, comenzando hasta 30 días antes de la fecha probable de parto. TechFlow extiende este beneficio más allá del mínimo legal.
+
+Los empleados tienen derecho a 15 días corridos de licencia por paternidad paga a partir del nacimiento o adopción. Esta licencia debe tomarse de forma continua e inmediata al evento.
+
+En casos de adopción, tanto madres como padres acceden a los mismos beneficios descritos arriba.
+
+HORARIOS Y MODALIDAD DE TRABAJO
+---------------------------------
+
+TechFlow opera bajo modalidad híbrida. Los empleados deben asistir a la oficina un mínimo de 2 días por semana, los cuales son definidos por cada equipo en coordinación con su manager.
+
+El horario estándar es de 9:00 a 18:00 con una hora de almuerzo. Sin embargo, TechFlow aplica una política de flexibilidad horaria: los empleados pueden iniciar su jornada entre las 8:00 y las 10:00, ajustando el horario de salida en consecuencia, siempre que cumplan las 8 horas diarias.
+
+El trabajo remoto desde el exterior del país requiere aprobación previa de RRHH y no puede extenderse por más de 30 días corridos por año.
+
+CÓDIGO DE CONDUCTA
+-------------------
+
+TechFlow espera de todos sus empleados un trato respetuoso, inclusivo y profesional en todos los entornos de trabajo, tanto presenciales como virtuales. No se toleran conductas de acoso, discriminación o violencia de ningún tipo.
+
+Cualquier situación de este tipo debe reportarse al equipo de RRHH o mediante el canal anónimo disponible en el portal HR Connect. Todas las denuncias son investigadas con confidencialidad.
+
+El uso de recursos de la empresa (equipos, internet, software) debe limitarse a fines laborales. El uso personal moderado y ocasional está permitido, pero no puede interferir con las responsabilidades del empleado.
+
+EVALUACIÓN DE DESEMPEÑO
+-------------------------
+
+TechFlow realiza evaluaciones de desempeño dos veces por año: en junio y en diciembre. El proceso incluye una autoevaluación del empleado, una evaluación del manager y una instancia de feedback 360 con pares del equipo.
+
+Los resultados de la evaluación impactan directamente en los ajustes salariales anuales y en el plan de carrera. Los empleados que obtengan una calificación de "supera expectativas" durante dos ciclos consecutivos son automáticamente considerados para promoción.
+
+Los objetivos individuales (OKRs) se definen al inicio de cada semestre junto con el manager y deben estar alineados con los objetivos del equipo y de la empresa.
+TECHFLOW - BENEFICIOS Y COMPENSACIONES
+=======================================
+
+SALARIO Y REVISIONES SALARIALES
+---------------------------------
+
+TechFlow realiza revisiones salariales una vez al año, en el mes de enero, basándose en los resultados de la evaluación de desempeño de diciembre. Los ajustes pueden ser por mérito, por inflación o por cambio de banda salarial ante una promoción.
+
+Los empleados nuevos no son elegibles para revisión salarial hasta completar 6 meses en la empresa. Las bandas salariales por rol y nivel están disponibles en el portal HR Connect bajo la sección "Compensaciones".
+
+TechFlow tiene una política de transparencia salarial interna: los empleados pueden consultar las bandas de su rol y del nivel inmediato superior para planificar su carrera.
+
+BONO ANUAL
+-----------
+
+Los empleados con más de 6 meses de antigüedad son elegibles para el bono anual de desempeño, pagadero en febrero. El bono se calcula como un porcentaje del salario bruto anual según el nivel de desempeño:
+
+- Cumple expectativas: 5% del salario anual bruto
+- Supera expectativas: 10% del salario anual bruto
+- Desempeño excepcional: 15% del salario anual bruto
+
+Los empleados que se desvinculen antes del 31 de diciembre no son elegibles para el bono del año en curso, salvo acuerdo especial documentado.
+
+COBERTURA MÉDICA
+-----------------
+
+TechFlow ofrece cobertura médica prepaga de primer nivel para todos los empleados de tiempo completo. La empresa cubre el 100% del costo de la cobertura individual del empleado y el 50% del costo de extensión para grupo familiar directo (cónyuge e hijos menores de 26 años).
+
+El alta en la cobertura médica se realiza automáticamente al inicio del contrato. Cambios en el grupo familiar (nacimiento, matrimonio, divorcio) deben comunicarse a RRHH dentro de los 30 días del evento.
+
+Los empleados pueden optar por una cobertura de mayor categoría abonando la diferencia de costo. Las opciones disponibles están listadas en el portal HR Connect.
+
+CAPACITACIÓN Y DESARROLLO
+---------------------------
+
+Cada empleado cuenta con un presupuesto anual de $1.500 USD para capacitación externa: cursos, certificaciones, conferencias o libros técnicos. El presupuesto se renueva cada enero y no es acumulable.
+
+Para utilizar el presupuesto, el empleado debe completar el formulario de solicitud en HR Connect con al menos 2 semanas de anticipación, detallando el curso, el costo y la relevancia para su rol. Las solicitudes son aprobadas por el manager directo.
+
+TechFlow también ofrece acceso ilimitado a plataformas internas de e-learning: cursos de liderazgo, comunicación, herramientas técnicas y habilidades blandas. Estas plataformas están disponibles en el portal sin necesidad de aprobación previa.
+
+Los empleados que obtengan certificaciones relevantes para su rol reciben un bono único de $500 USD como reconocimiento.
+
+EQUIPAMIENTO DE TRABAJO
+------------------------
+
+TechFlow provee a cada empleado una laptop corporativa al inicio del contrato. Los empleados pueden elegir entre MacBook Pro M3 o ThinkPad X1 Carbon según preferencia y disponibilidad de stock.
+
+Adicionalmente, los empleados que trabajan en modalidad híbrida reciben un subsidio de $200 USD para equipamiento de home office (monitor, teclado, mouse, etc.) al cumplir los 3 meses de antigüedad.
+
+Los equipos son propiedad de la empresa y deben devolverse en buen estado al momento de la desvinculación. El daño por uso normal no genera cargo, pero el daño por negligencia puede ser descontado.
+
+OTROS BENEFICIOS
+-----------------
+
+TechFlow ofrece los siguientes beneficios adicionales para todos los empleados de tiempo completo:
+
+Comidas: subsidio del 80% en el comedor corporativo para empleados que asisten a la oficina. Los días de trabajo remoto no incluyen este beneficio.
+
+Gimnasio: reembolso de hasta $50 USD mensuales en membresía de gimnasio o actividad física, contra presentación de comprobante en HR Connect.
+
+Día de cumpleaños libre: los empleados tienen un día libre pago en la semana de su cumpleaños, sin necesidad de solicitud formal.
+
+Programa de referidos: los empleados que refieran candidatos exitosos reciben un bono de $1.000 USD una vez que el referido completa 6 meses en la empresa.
+
+Seguro de vida: TechFlow contrata un seguro de vida colectivo equivalente a 24 meses de salario bruto para todos los empleados de tiempo completo.
+TECHFLOW - ONBOARDING Y OFFBOARDING
+=====================================
+
+PROCESO DE ONBOARDING
+----------------------
+
+El proceso de incorporación de nuevos empleados en TechFlow está diseñado para garantizar una integración rápida y efectiva. El onboarding estándar tiene una duración de 30 días y se divide en tres fases.
+
+FASE 1 - SEMANA 1: BIENVENIDA E INFRAESTRUCTURA
+
+El primer día, el empleado recibe su laptop corporativa configurada, sus credenciales de acceso a todos los sistemas y un kit de bienvenida con merchandising de TechFlow. Se realiza una reunión de bienvenida con RRHH para revisar políticas, beneficios y procedimientos internos.
+
+Durante la primera semana, el empleado completa los cursos obligatorios de onboarding disponibles en la plataforma interna: seguridad de la información, código de conducta, y herramientas corporativas (Slack, Jira, Confluence, Google Workspace).
+
+FASE 2 - SEMANAS 2 Y 3: INMERSIÓN EN EL ROL
+
+El empleado se integra progresivamente a las rutinas del equipo: daily standups, reuniones de planificación y retrospectivas. El manager asigna un buddy (compañero de referencia) del mismo equipo para acompañar al nuevo empleado durante el primer mes.
+
+Durante esta fase se realizan reuniones one-on-one con los principales stakeholders del rol: otros equipos con los que se trabaja frecuentemente, líderes de área y clientes internos clave.
+
+FASE 3 - SEMANAS 3 Y 4: PRIMERAS CONTRIBUCIONES
+
+El empleado comienza a trabajar en tareas reales de complejidad gradual, definidas en el plan de 30 días acordado con el manager. Al finalizar el mes, se realiza una reunión de check-in entre el empleado, el manager y RRHH para evaluar la integración y ajustar expectativas si es necesario.
+
+PERÍODO DE PRUEBA
+------------------
+
+Todos los nuevos empleados tienen un período de prueba de 3 meses. Durante este período, tanto el empleado como la empresa pueden dar por terminada la relación laboral con 2 semanas de preaviso. Al finalizar el período de prueba, RRHH y el manager realizan una evaluación formal para confirmar la continuidad.
+
+PROCESO DE OFFBOARDING
+-----------------------
+
+Cuando un empleado se desvincula de TechFlow, ya sea por renuncia o por decisión de la empresa, se activa el proceso de offboarding para garantizar una transición ordenada.
+
+RENUNCIA VOLUNTARIA
+
+El empleado debe comunicar su renuncia por escrito (correo electrónico a su manager y a RRHH) con un preaviso mínimo de 2 semanas para roles individuales colaboradores, y de 4 semanas para roles de liderazgo. TechFlow puede acordar mutuamente reducir el período de preaviso si ambas partes lo consideran conveniente.
+
+CHECKLIST DE SALIDA
+
+Durante el período de preaviso, el empleado debe completar un checklist de transferencia de conocimiento: documentar procesos a su cargo, transferir accesos y contraseñas a su manager, y completar una entrevista de salida con RRHH.
+
+El último día, el empleado devuelve la laptop y cualquier otro equipo corporativo. RRHH realiza la baja de todos los accesos a sistemas internos dentro de las 24 horas posteriores a la fecha de egreso.
+
+LIQUIDACIÓN FINAL
+
+La liquidación final (vacaciones no gozadas, proporcional de aguinaldo, otros conceptos adeudados) se acredita dentro de los 4 días hábiles posteriores a la fecha de egreso, conforme a la legislación vigente.
+
+ENTREVISTA DE SALIDA
+
+TechFlow realiza entrevistas de salida con todos los empleados que se desvinculan voluntariamente. La entrevista es confidencial y su objetivo es identificar oportunidades de mejora en la cultura, los procesos y las condiciones de trabajo. Los resultados se analizan de forma agregada y anónima.
+
+REFERENCIAS LABORALES
+
+TechFlow provee referencias laborales neutras por defecto: confirma fechas de ingreso y egreso, y el rol desempeñado. Referencias de desempeño detalladas requieren autorización expresa del empleado saliente y son gestionadas por el manager directo.
+TECHFLOW - PREGUNTAS FRECUENTES DE RECURSOS HUMANOS
+====================================================
+
+VACACIONES Y TIEMPO LIBRE
+--------------------------
+
+¿Cuántos días de vacaciones tengo disponibles?
+Los empleados de tiempo completo tienen 15 días hábiles anuales hasta los 3 años de antigüedad, 20 días entre 3 y 5 años, y 25 días a partir de los 5 años. Los días se acreditan proporcionalmente mes a mes desde el primer día de trabajo.
+
+¿Puedo tomar vacaciones durante el período de prueba?
+No. Las vacaciones no están disponibles durante los primeros 3 meses de relación laboral. Sin embargo, los días se acumulan durante ese período y estarán disponibles al finalizar el período de prueba.
+
+¿Qué pasa si no uso todos mis días de vacaciones?
+Al cierre del año fiscal podés acumular hasta 10 días no utilizados para el año siguiente. Los días que excedan ese límite se pierden automáticamente. TechFlow recomienda planificar las vacaciones con anticipación para evitar la pérdida de días.
+
+¿Puedo tomar vacaciones fraccionadas?
+Sí. Podés tomar vacaciones en bloques de mínimo 1 día hábil. No hay requisito de tomarlas en períodos mínimos de semanas. La única restricción es la aprobación del manager según la disponibilidad del equipo.
+
+¿Cómo solicito vacaciones?
+Ingresá al portal HR Connect, sección "Solicitudes", elegí "Vacaciones", seleccioná las fechas y enviá la solicitud. Tu manager recibirá una notificación y tiene 5 días hábiles para aprobar o rechazar. Recordá hacerlo con al menos 2 semanas de anticipación.
+
+¿Qué pasa si mi manager no responde mi solicitud de vacaciones?
+Si tu manager no responde dentro de los 5 días hábiles, podés escalar la solicitud a RRHH a través de HR Connect o escribiendo a people@techflow.io. RRHH interviene para garantizar que todas las solicitudes reciban respuesta oportuna.
+
+¿Puedo tomar el día de mi cumpleaños en cualquier día de esa semana?
+Sí. El día libre de cumpleaños puede tomarse cualquier día hábil de la semana en que cae tu cumpleaños. Si tu cumpleaños cae en fin de semana o feriado, podés tomarlo la semana anterior o la siguiente. No necesitás aprobación formal, solo avisarle a tu manager con anticipación.
+
+SALARIO Y COMPENSACIONES
+--------------------------
+
+¿Cuándo se realizan los ajustes salariales?
+Los ajustes salariales se realizan en enero de cada año, basados en la evaluación de desempeño de diciembre. Los empleados con menos de 6 meses de antigüedad al 31 de diciembre no son elegibles para el ajuste de ese ciclo.
+
+¿Puedo solicitar un aumento fuera del ciclo de revisión anual?
+En circunstancias excepcionales (cambio significativo de responsabilidades, retención ante oferta externa) es posible solicitar una revisión fuera de ciclo. Debe iniciarse con una conversación con tu manager, quien lo eleva a RRHH y al área de compensaciones para evaluación.
+
+¿Cómo se calcula el bono anual?
+El bono se calcula como porcentaje del salario bruto anual: 5% para quienes "cumplen expectativas", 10% para "supera expectativas", y 15% para "desempeño excepcional". Se paga en febrero y requiere tener más de 6 meses de antigüedad al 31 de diciembre.
+
+¿En qué fecha se acredita el salario?
+El salario se acredita el último día hábil de cada mes. Si ese día cae en fin de semana o feriado, se adelanta al día hábil anterior.
+
+¿Dónde puedo ver mi recibo de sueldo?
+Los recibos de sueldo están disponibles en el portal HR Connect, sección "Mis documentos", dentro de los primeros 5 días hábiles del mes siguiente al devengamiento.
+
+BENEFICIOS
+-----------
+
+¿Cuándo puedo empezar a usar el beneficio de cobertura médica?
+La cobertura médica se activa desde el primer día de trabajo. Recibirás los datos del prepago y la credencial por correo durante la primera semana. Si no recibís esa información, contactá a people@techflow.io.
+
+¿Cómo agrego a mi familia a la cobertura médica?
+Ingresá a HR Connect, sección "Beneficios", y completá el formulario de modificación de grupo familiar. Debés hacerlo dentro de los 30 días del evento (nacimiento, matrimonio). Fuera de ese plazo, el cambio aplica en el próximo período de inscripción anual.
+
+¿Cómo proceso el reembolso de gimnasio?
+Cargá el comprobante de pago de tu membresía en HR Connect, sección "Reembolsos". El monto máximo es USD 50 mensuales. El reembolso se procesa junto con el salario del mes siguiente.
+
+¿Puedo usar el presupuesto de capacitación para cualquier curso?
+El curso debe tener relación con tu rol actual o con el desarrollo de habilidades relevantes para TechFlow. Tu manager define si el curso cumple ese criterio al aprobar la solicitud. Los cursos puramente personales o de hobbies no son elegibles.
+
+TRABAJO REMOTO Y PRESENCIALIDAD
+--------------------------------
+
+¿Puedo elegir qué días ir a la oficina?
+Los días de presencia en oficina se coordinan a nivel de equipo. Cada equipo define, junto con su manager, qué días son los días de presencia común para garantizar colaboración. Dentro de esa coordinación, tenés flexibilidad para adaptar tus otros días según tus necesidades.
+
+¿Puedo trabajar desde otro país?
+Sí, con restricciones. Podés trabajar remotamente desde el exterior hasta 30 días corridos por año, previa aprobación de RRHH. Hay consideraciones impositivas y legales que varían según el país destino; RRHH te asesorará caso a caso.
+
+¿Qué pasa si tengo una emergencia y no puedo ir a la oficina un día en que debía estar presente?
+Avisale a tu manager lo antes posible. Las situaciones de emergencia siempre son contempladas. Si las ausencias a los días de presencia se vuelven recurrentes sin justificación, tu manager conversará con vos para encontrar una solución.
+
+DESVINCULACIÓN
+---------------
+
+¿Con cuánto tiempo debo avisar si renuncio?
+El preaviso estándar es de 2 semanas para roles individuales colaboradores y de 4 semanas para roles de liderazgo. TechFlow puede acordar reducir el período si hay acuerdo mutuo.
+
+¿Cuándo recibo la liquidación final?
+La liquidación se acredita dentro de los 4 días hábiles posteriores a tu fecha de egreso. Incluye vacaciones no gozadas, proporcional de aguinaldo y cualquier otro concepto adeudado según la legislación vigente.
+
+¿Me devuelven el dinero del bono si me voy antes de que se pague?
+No. El bono es pagadero en febrero a quienes estén activos al momento del pago. Si te desvinculás antes de esa fecha, no sos elegible para el bono del año anterior, salvo acuerdo especial documentado.
+
+EVALUACIÓN Y DESARROLLO
+------------------------
+
+¿Con qué frecuencia se realizan las evaluaciones de desempeño?
+Dos veces al año: en junio (mid-year review) y en diciembre (annual review). La evaluación de diciembre es la que impacta en el ajuste salarial y el bono anual.
+
+¿Qué es la evaluación 360?
+Es una instancia de feedback donde recibís evaluación no solo de tu manager sino también de tus pares del equipo. El objetivo es tener una visión más completa de tu desempeño y tus áreas de desarrollo. La evaluación 360 es confidencial: no sabés quién dijo qué, solo recibís el feedback consolidado.
+
+¿Cómo se definen mis objetivos (OKRs)?
+Al inicio de cada semestre, tenés una conversación con tu manager para definir tus objetivos individuales. Deben ser específicos, medibles y alineados con los objetivos del equipo y de la empresa. Los OKRs acordados se registran en el portal HR Connect.
+
+¿Qué pasa si no alcanzo mis objetivos?
+No alcanzar los objetivos en un período no genera consecuencias automáticas. Se analiza en contexto: si hubo circunstancias externas, si los objetivos eran realistas, qué podés hacer diferente. TechFlow promueve una cultura de aprendizaje. Si el bajo desempeño es sostenido en el tiempo, el manager trabajará con vos y RRHH en un plan de mejora formal.
