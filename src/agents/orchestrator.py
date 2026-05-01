@@ -45,11 +45,14 @@ class Orchestrator:
             # Paso 1: detectar el dominio
             domain = self.router.route(question)
 
-            # Paso 2: si el dominio no tiene agente, usamos el fallback
+            # 2. Normalización + fallback
+            domain = domain if domain in self.agents else self.fallback_domain
+
+            # 3. Validación fuerte (config error)
             if domain not in self.agents:
-                log.info(f"[Orchestrator] Dominio '{domain}' sin agente. "
-                        f"Usando fallback: '{self.fallback_domain}'")
-                domain = self.fallback_domain
+                raise RuntimeError(
+                    f"No hay agente fallback configurado: '{domain}'"
+            )
 
             
             self.tracer.set_output({
@@ -61,26 +64,26 @@ class Orchestrator:
 
             with self.tracer.start_span(domain):
                 # Paso 3: delegar al agente
-                result = self.agents[domain].answer(question)
+                try:
+                    result = self.agents[domain].answer(question)
+                except Exception as e:
+                    log.error(f"[Orchestrator] Error en agente '{domain}': {e}")
+
+                    domain = self.fallback_domain
+                    result = self.agents[domain].answer(question)
                 
-                # self.tracer.set_output({"prompt": result["prompt"], "response": result["response"]})
+    
                 self.tracer.set_output({
                     "prompt": result.get("prompt", None),
                     "response": result.get("response", "")
                 })
 
                 result["routed_by"] = self.router.__class__.__name__
-
-                # return {
-                #     "domain": domain,
-                #     "answer":result["response"],
-                #     "prompt":  result["prompt"],
-                #     "routed_by": "keyword_router"              
-                # }        
+       
                 return {
                     "domain": domain,
                     "answer": result.get("response", ""),
                     "prompt": result.get("prompt"),
-                    "routed_by": "keyword_router"
+                    "routed_by":  self.router.__class__.__name__
                 }
 

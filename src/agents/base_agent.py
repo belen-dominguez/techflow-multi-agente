@@ -10,22 +10,40 @@ class BaseRAGAgent:
         self.log = logger
 
     def answer(self, question: str) -> Dict:
-        chunks = self.retriever.retrieve(question)
+        try:
+            chunks = self.retriever.retrieve(question)
 
-        context = "\n\n".join(chunk.page_content for chunk in chunks)
+            if not chunks:
+                self.log.warning(f"[{self.domain_name}] Sin chunks para: '{question}'")
+                return {
+                    "response": "No encontré información relevante para responder esa consulta.",
+                    "prompt": None
+                }
 
-        prompt = RAG_AGENT_PROMPT.format(
-            domain=self.domain_name,
-            context=context,
-            question=question,
-        )
+            context = "\n\n".join(
+                getattr(chunk, "page_content", str(chunk))
+                for chunk in chunks
+            )
 
-        response = self.llm.invoke(prompt)
-        content = response.content if hasattr(response, "content") else str(response)
+            prompt = RAG_AGENT_PROMPT.format(
+                domain=self.domain_name,
+                context=context,
+                question=question,
+            )
 
-        self.log.info(f"[{self.domain_name}] Respondiendo: '{content}'")
+            response = self.llm.invoke(prompt)
+            content = response.content if hasattr(response, "content") else str(response)
 
-        return {
-            "response": content,
-            "prompt": prompt
-        }
+            self.log.info(f"[{self.domain_name}], Respondiendo: '{content}'")
+
+            return {
+                "response": content,
+                "prompt": prompt
+            }
+        except Exception as e:
+            self.log.error(f"[{self.domain_name}] Error: {e}")
+
+            return {
+                "response": "Ocurrió un error al procesar la consulta.",
+                "prompt": None
+            }

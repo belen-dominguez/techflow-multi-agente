@@ -65,11 +65,11 @@ class KeywordRouter:
     de palabras clave. No consume tokens de OpenAI.
     """
 
-    def __init__(self, fallback_domain: str = "hr"):
+    def __init__(self, fallback_domain: str = "unknown"):
         """
         Args:
             fallback_domain: dominio a retornar si no hay coincidencias.
-                             Por defecto "hr".
+                             Por defecto "unknown".
         """
         self.fallback_domain = fallback_domain
 
@@ -104,16 +104,25 @@ class KeywordRouter:
                 )
                 scores[domain] = score
 
-            best_domain = max(scores, key=lambda d: scores[d])
-            best_score = scores[best_domain]
+            # best_domain = max(scores, key=lambda d: scores[d])
+            # best_score = scores[best_domain]
 
-            if best_score == 0:
-                log.info(f"[KeywordRouter] Sin coincidencias para '{query}'. "
-                         f"Usando fallback: '{self.fallback_domain}'")
+            # if best_score == 0:
+            #     log.info(f"[KeywordRouter] Sin coincidencias para '{query}'. "
+            #              f"Usando fallback: '{self.fallback_domain}'")
+            #     return self.fallback_domain
+
+            # log.info(f"[KeywordRouter] Query: '{query}' -> "
+            #          f"dominio: '{best_domain}' (score: {best_score})")
+            best_score = max(scores.values())
+            best_domains = [d for d, s in scores.items() if s == best_score]
+
+            if best_score == 0 or len(best_domains) > 1:
+                log.info(f"[KeywordRouter] Ambiguo o sin match para '{query}'. "
+                        f"Usando fallback: '{self.fallback_domain}'")
                 return self.fallback_domain
 
-            log.info(f"[KeywordRouter] Query: '{query}' -> "
-                     f"dominio: '{best_domain}' (score: {best_score})")
+            best_domain = best_domains[0]
             return best_domain
 
         except Exception as e:

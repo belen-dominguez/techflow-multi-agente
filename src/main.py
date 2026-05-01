@@ -50,7 +50,7 @@ def main():
     agents["unknown"] = FallbackAgent()
     
     log.info(f"Agentes creados.")
-    router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "hr"))
+    router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "unknown"))
     log.info(f"Router creado.")
     tracer = Tracer()
     log.info(f"Tracer creado.")
@@ -61,8 +61,12 @@ def main():
     log.info(f"Sistema listo.\n")
  
     # Ejecutamos las consultas de prueba
-    with open(ROOT_DIR / "test_queries.json", "r", encoding="utf-8") as f:
-        test_queries = json.load(f)
+    try:
+        with open(ROOT_DIR / "test_queries.json", "r", encoding="utf-8") as f:
+            test_queries = json.load(f)
+    except Exception as e:
+        log.error(f"No se pudieron cargar las queries: {e}")
+        return
 
     results = []
     for item in test_queries:
@@ -71,43 +75,60 @@ def main():
             name="m3-multi-agent",
             input_data={"question":  item["query"]}
         ) as trace:
-            trace_id = trace.id
-            query    = item["query"]
-            expected = item["expected_domain"]
-    
-            # 1. Ejecutamos la consulta
-            result = orchestrator.route(query)
-            match  = "✓" if result["domain"] == expected else "✗"
+            try:
+                trace_id = trace.id
+                query = item["query"]
+                expected = item["expected_domain"]
 
-            # 2. Evaluamos la respuesta
-            evaluation = evaluator.evaluate(
-                query=query,
-                answer=result["answer"],
-            )
+                result = orchestrator.route(query)
 
-            tracer.add_score(
-                trace_id=trace_id,
-                name="overall",
-                value=sum([
+                evaluation = evaluator.evaluate(
+                    query=query,
+                    answer=result["answer"],
+                )
+
+                final_score = sum([
                     evaluation["relevance"],
                     evaluation["accuracy"],
                     evaluation["completeness"]
-                ]) / 3,
-                comment=evaluation["reasoning"]
-            )
-    
-            # 4. Mostramos en terminal
-            log.info(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
-            log.info(f"   Evaluación: relevance: {evaluation['relevance']}/10, accuracy: {evaluation['accuracy']}/10, completeness: {evaluation['completeness']}/10 — {evaluation['reasoning']}")
-            log.info("=" * 60)
+                ]) / 3
 
-            results.append({**result, "expected_domain": expected, "evaluation": evaluation})
+                tracer.add_score(
+                    trace_id=trace_id,
+                    name="overall",
+                    value=final_score,
+                    comment=evaluation["reasoning"]
+                )
+
+                match = "✓" if result["domain"] == expected else "✗"
+
+                log.info(f"{match} Dominio detectado: {result['domain']} | Esperado: {expected}")
+                log.info(f"Evaluación: {evaluation}")
+                print("=" * 50)
+                results.append({
+                    **result,
+                    "expected_domain": expected,
+                    "evaluation": evaluation
+                })
+
+            except Exception as e:
+                log.error(f"Error procesando query '{item.get('query')}': {e}")
+
+                results.append({
+                    "query": item.get("query"),
+                    "error": str(e)
+                })
  
     # Guardamos resultados
-    (ROOT_DIR / "outputs").mkdir(exist_ok=True)
-    with open(ROOT_DIR / "outputs" / "test_results.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
- 
+    try:
+        (ROOT_DIR / "outputs").mkdir(exist_ok=True)
+
+        with open(ROOT_DIR / "outputs" / "test_results.json", "w", encoding="utf-8") as f:
+            json.dump(results, f, ensure_ascii=False, indent=2)
+
+    except Exception as e:
+        log.error(f"No se pudieron guardar los resultados: {e}")
+    
 
     tracer.flush()
     log.info("\n✓ Resultados guardados en outputs/test_results.json")
