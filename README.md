@@ -242,8 +242,6 @@ Existen dos formas de router que se pueden seleccionar desde el archivo config: 
 
 ## 🚧 Mejoras futuras
 
-* Router basado en embeddings o clasificación
-* Evaluación con grounding (uso real de chunks)
 * Mejor tuning de chunking y retrieval
 * UI para consultas interactivas
 * Persistencia avanzada de vectores
