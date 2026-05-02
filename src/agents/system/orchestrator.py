@@ -63,7 +63,7 @@ class Orchestrator:
             log.info(f"[Orchestrator] Enrutando a agente '{domain}'...")
 
             with self.tracer.start_span(domain):
-                # Paso 3: delegar al agente
+                # Paso 4: delegar al agente
                 try:
                     result = self.agents[domain].answer(question)
                 except Exception as e:

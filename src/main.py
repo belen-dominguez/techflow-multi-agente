@@ -59,9 +59,9 @@ def main():
         if config.get("routing.strategy") == "llm"
         else KeywordRouter(fallback_domain=fallback)
     )
-    # router = KeywordRouter(fallback_domain=config.get("routing.fallback_domain", "unknown")) 
     log.info(f"Router creado.")
 
+    # Tracer. orquestrador y evaluador
     tracer = Tracer()
     log.info(f"Tracer creado.")
 
@@ -104,7 +104,7 @@ def main():
                     evaluation["relevance"],
                     evaluation["accuracy"],
                     evaluation["completeness"]
-                ]) / 3
+                ]) 
 
                 tracer.add_score(
                     trace_id=trace_id,
