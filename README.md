@@ -4,6 +4,13 @@ Sistema de inteligencia artificial basado en arquitectura **multi-agente con RAG
 
 ---
 
+## 📢Consigna
+Desarrolla un sistema multiagente en el que un Agente Orquestador clasifique la intención de la consulta del usuario (por ejemplo, RR. HH. o Tecnología). Esta clasificación activa un enrutamiento condicional que delega la tarea de recuperación al Agente RAG especializado correcto, para generar una respuesta contextualmente fundamentada. Todo el flujo dinámico debe implementarse con LangChain y quedar trazado completamente con Langfuse.
+
+Bonus: Implementa un Agente Evaluador dentro de Langfuse para asignar automáticamente a cada respuesta RAG un puntaje de calidad de 1 a 10, basado en la consulta original y la respuesta final.
+
+---
+
 ## 🚀 Descripción
 
 Este proyecto implementa un sistema capaz de:
